@@ -1,0 +1,12 @@
+@use 'variables' as v;
+
+@mixin transition($props...) {
+    transition: $props;
+}
+
+@mixin flex($justify: flex-start, $align: center, $direction: row) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direction;
+}

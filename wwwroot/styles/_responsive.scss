@@ -1,0 +1,50 @@
+@use 'variables' as v;
+
+@media (min-width: 769px) {
+    .review-card {
+        flex: 0 0 calc(50% - 20px);
+        max-width: calc(50% - 20px);
+        margin: 40px 10px;
+    }
+
+    .reviews {
+        padding: 80px 30px;
+
+        &__title {
+            font-size: 32px;
+        }
+
+        &__controls {
+            gap: v.$gap-normal-px;
+        }
+    }
+}
+
+@media (min-width: 1025px) {
+    .reviews {
+        padding: 100px 40px;
+
+        &__title {
+            font-size: v.$font-size-title-pc;
+            font-style: italic;
+            line-height: 48px;
+        }
+
+        &__carousel {
+            width: 95%;
+            margin: 0 auto;
+        }
+    }
+
+    .review-card {
+        flex: 0 0 calc(33.333% - 20px);
+        max-width: calc(33.333% - 20px);
+        margin: 40px 10px;
+        padding: 40px;
+
+        &__text {
+            line-height: v.$line-height-large-px;
+            font-size: v.$font-size-normal-px;
+        }
+    }
+}

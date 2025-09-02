@@ -1,0 +1,56 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+
+.review-card {
+    flex: 0 0 100%;
+    max-width: 100%;
+    height: max-content;
+    gap: v.$gap-normal-px;
+    padding: 20px;
+    margin-bottom: 40px;
+    border: 0.5px solid rgba(112, 112, 112, 0.5);
+    @include m.transition(transform 0.3s ease, box-shadow 0.3s ease);
+
+    &__header {
+        @include m.flex(flex-start, center);
+        gap: v.$gap-small-px;
+        margin-bottom: 25px;
+    }
+
+    &__avatar {
+        width: 50px;
+        height: 50px;
+        border-radius: v.$avatar-radius;
+    }
+
+    &__info {
+        display: flex;
+        align-items: center;
+    }
+
+    &__name {
+        color: v.$text-color;
+        font-weight: v.$font-weight-bold;
+        font-size: v.$font-size-normal-px;
+        margin-bottom: 5px;
+        line-height: 20px;
+    }
+
+    &__text {
+        color: v.$text-color;
+        font-weight: v.$font-weight-normal;
+        font-size: v.$font-size-small-px;
+        line-height: v.$line-height-large-deg;
+        margin-bottom: 25px;
+    }
+
+    &__link {
+        text-decoration: none;
+        color: v.$text-color;
+        font-weight: v.$font-weight-normal;
+        font-size: v.$font-size-small-px;
+        gap: 10px;
+        display: flex;
+        justify-content: flex-end;
+    }
+}
